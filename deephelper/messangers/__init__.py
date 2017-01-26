@@ -1,6 +1,7 @@
 """
 All messanger front- and backend
 """
+from .backend import TelegramAPI
 
 
 class Messangers(object):
@@ -45,7 +46,6 @@ class Messangers(object):
 
     def _build_messanger(self, messanger, settings):
         if messanger == "telegram":
-            from .backend import TelegramAPI
             return TelegramAPI(settings)
         else:
             er_mes = "Sorry, It's not working with {}"
