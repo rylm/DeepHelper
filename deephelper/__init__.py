@@ -2,7 +2,7 @@
 
 import json
 import importlib
-from messanger import Messangers
+from .messangers import Messangers
 
 
 class DeepHelper(object):
@@ -28,4 +28,4 @@ class DeepHelper(object):
 
     def to_dropbox(self, filename):
         with open(filename, "rb") as fp:
-            return self.dropbox.put_file('/' + filename, fp)
+            return self.dropbox.put_file('/' + filename, fp.read())
