@@ -1,9 +1,8 @@
 #!/bin/python3
 
 import json
-import importlib
 from .messangers import Messangers
-
+import dropbox
 
 class DeepHelper(object):
     """Main DeepHelper class"""
@@ -18,7 +17,6 @@ class DeepHelper(object):
             if settings.get("messangers"):
                 self.messangers = Messangers(settings["messangers"])
             if settings.get("dropbox"):
-                import dropbox
                 token = settings["dropbox"]["token"]
                 self.dropbox = dropbox.client.DropboxClient(token)
 

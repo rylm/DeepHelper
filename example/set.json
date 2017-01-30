@@ -1,7 +1,0 @@
-{
-  "network_file": "example.testmod",
-  "network_class": "Net",
-  "training_messages_template": "Current date: {date}",
-  "output_pattern": ["date"],
-  "messengers_token": "Your API token here"
-}

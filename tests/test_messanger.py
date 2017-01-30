@@ -29,6 +29,11 @@ def work_messanger(work_settings, monkeypatch):
     monkeypatch.setattr(TeleBot, "send_message", send_message)
     yield Messangers(work_settings)
 
+
+
+
+
+
 def test_build_messangers(work_messanger):
     assert len(work_messanger._messagers_list) == 1
 
