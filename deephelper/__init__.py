@@ -1,7 +1,7 @@
 #!/bin/python3
 
 import json
-from .messangers import Messangers
+from .messangers import Messengers
 import dropbox
 
 class DeepHelper(object):
