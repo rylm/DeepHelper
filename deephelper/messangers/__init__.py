@@ -4,11 +4,11 @@ All messanger front- and backend
 from .backend import TelegramAPI
 
 
-class Messangers(object):
-    """docstring for Messangers."""
+class Messengers(object):
+    """docstring for Messengers."""
 
     def __init__(self, settings):
-        super(Messangers, self).__init__()
+        super(Messengers, self).__init__()
 
         self._messagers_list = []
         set_keys = list(settings.keys())
@@ -23,19 +23,19 @@ class Messangers(object):
         #     pass
         ## End future
 
-        for mesanger_name in set_keys:
-            mesanger_bot = self._build_messanger(mesanger_name,
+        for messenger_name in set_keys:
+            mesanger_bot = self._build_messanger(messenger_name,
                                                     settings[mes_name])
             self._messagers_list.append(mesanger_bot)
 
     def send_messages(self, message):
         """Send messages to all chats"""
-        for messanger in self._messagers_list:
-            messanger.send_message(message)
+        for messenger in self._messagers_list:
+            messenger.send_message(message)
 
-    def _build_messanger(self, messanger, settings):
-        if messanger == "telegram":
+    def _build_messanger(self, messenger, settings):
+        if messenger == "telegram":
             return TelegramAPI(settings)
         else:
             er_mes = "Sorry, It's not working now with {}"
-            raise NotImplementedError(er_mes.format(messanger))
+            raise NotImplementedError(er_mes.format(messenger))
