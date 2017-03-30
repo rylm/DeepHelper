@@ -15,9 +15,9 @@ class DeepHelper(object):
 
         if settings:
             if settings.get("messangers"):
-                self.messangers = Messangers(settings["messangers"])
+                self.messengers = Messengers(settings["messangers"])
             else:
-                self.messangers = None
+                self.messengers = None
 
             if settings.get("dropbox"):
                 token = settings["dropbox"]["token"]
@@ -27,12 +27,12 @@ class DeepHelper(object):
 
 
     def prints(self, message):
-        assert self.messangers, "Not setting messangers"
-        self.messangers.send_messages(message)
+        assert self.messengers, "Not setting messangers"
+        self.messengers.send_messages(message)
 
     def send_messages(self, message):
-        assert self.messangers, "Not setting messangers"
-        self.messangers.send_messages(message)
+        assert self.messengers, "Not setting messangers"
+        self.messengers.send_messages(message)
 
     def to_dropbox(self, filename):
         assert self.dropbox, "Not setting dropbox"
