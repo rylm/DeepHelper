@@ -25,7 +25,7 @@ class Messengers(object):
 
         for messenger_name in set_keys:
             mesanger_bot = self._build_messanger(messenger_name,
-                                                    settings[mes_name])
+                                                    settings[messenger_name])
             self._messagers_list.append(mesanger_bot)
 
     def send_messages(self, message):
