@@ -5,7 +5,7 @@ This  module including backend for Messangers
 from telebot import TeleBot
 
 
-class TelegramAPI(TeleBot):
+class TelegramAPI(TeleBot, object):
     def __init__(self, settings):
         self.chat_id = settings["chat_id"]
         super(TelegramAPI, self).__init__(settings["token"])
