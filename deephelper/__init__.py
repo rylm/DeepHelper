@@ -27,11 +27,9 @@ class DeepHelper(object):
 
 
     def prints(self, message):
-        assert self.messengers, "Not setting messangers"
         self.messengers.send_messages(message)
 
     def send_messages(self, message):
-        assert self.messengers, "Not setting messangers"
         self.messengers.send_messages(message)
 
     def to_dropbox(self, filename, overwrite=False):
