@@ -3,7 +3,11 @@ Here you can find different things.
 He can download files on dropbox and send you notification on telegram
 ## How to install
 ```{r, engine='bash', count_lines}
-pip install https://github.com/ADmitri42/DeepHelper.git
+pip install git+https://github.com/ADmitri42/DeepHelper.git
+```
+or
+```{r, engine='bash', count_lines}
+https://github.com/ADmitri42/DeepHelper/archive/master.zip
 ```
 ## How to use
 ```{r, engine='python', count_lines}
