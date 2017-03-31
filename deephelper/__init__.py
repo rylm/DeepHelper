@@ -34,7 +34,7 @@ class DeepHelper(object):
         assert self.messengers, "Not setting messangers"
         self.messengers.send_messages(message)
 
-    def to_dropbox(self, filename):
+    def to_dropbox(self, filename, overwrite=False):
         assert self.dropbox, "Not setting dropbox"
         with open(filename, "rb") as fp:
-            return self.dropbox.put_file('/' + filename, fp.read())
+            return self.dropbox.put_file('/' + filename, fp.read(), , overwrite=overwrite)
