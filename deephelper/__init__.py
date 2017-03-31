@@ -37,4 +37,4 @@ class DeepHelper(object):
     def to_dropbox(self, filename, overwrite=False):
         assert self.dropbox, "Not setting dropbox"
         with open(filename, "rb") as fp:
-            return self.dropbox.put_file('/' + filename, fp.read(), , overwrite=overwrite)
+            return self.dropbox.put_file('/' + filename, fp.read(), overwrite=overwrite)
